@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.ImcActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/text_titulo_fundo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <TextView
+            android:id="@+id/text_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_titulo_ncd"
+            android:textSize="35sp"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="30dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/text_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/text_subtitulo_ncd"
+            android:textSize="15sp"
+            android:textColor="@color/text_color"
+            android:layout_below="@+id/text_titulo"
+            android:layout_marginTop="15dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardview_fundo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_titulo_fundo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-9dp"
+        android:layout_marginBottom="-68dp"
+        android:background="@drawable/top_redondo">
+
+        <LinearLayout
+            android:id="@+id/linear_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_masculino_ncd"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/left_redondo"
+                android:text="Masculino"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_feminino_ncd"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/right_redondo"
+                android:text="Feminino"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/text_altura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_buttons"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:inputType="numberDecimal"
+            android:hint="Coloque usa Altura"/>
+
+        <TextView
+            android:id="@+id/text_array_idade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qual a sua idade?"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/text_altura"/>
+
+        <Spinner
+            android:id="@+id/spinner_idade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_array_idade"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+           android:entries="@array/idades"/>
+
+        <TextView
+            android:id="@+id/text_array_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qual o nivel de exercicio você faz?"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:layout_below="@+id/spinner_idade"/>
+
+        <Spinner
+            android:id="@+id/spinner_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_array_level"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:entries="@array/level"/>
+
+        <Button
+            android:id="@+id/button_calcularNCD"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular NCD"
+            android:background="@drawable/bordas_redondas"
+            android:layout_below="@+id/spinner_level"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

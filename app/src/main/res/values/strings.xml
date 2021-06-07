@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="text_titulo_calcule">Calcule seu IMC</string>
+    <string name="text_titulo_ncd">Calcule seu NCD</string>
+    <string name="text_subtitulo_ncd">O NCD (Índice da Massa Corporal) é um cálculo que servr para avaliar se a pessoa está dentro do seu peso ideal.</string>
+
+    <string-array name="idades">
+        <item>Entre 18 a 30 anos</item>
+        <item>Entre 31 a 60 anos</item>
+        <item>Acima de 60 anos</item>
+    </string-array>
+
+    <string-array name="level">
+        <item>Leve</item>
+        <item>Moderado</item>
+        <item>Intenso</item>
+    </string-array>
+</resources>

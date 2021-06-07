@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".gui.splash">
+
+    <ImageView
+        android:id="@+id/img_splash"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/imc"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/text_splash1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_splash"
+        android:text="Calculadora de Saúde"
+        android:textSize="30dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/text_splash2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_splash1"
+        android:text="Cuidando da sua saude por você"
+        android:textSize="20dp"
+        android:gravity="center"/>
+
+</RelativeLayout>

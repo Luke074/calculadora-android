@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.MenuActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/text_view_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculo da Saúde"
+        android:textAppearance="@style/titulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/text_view_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualidade de vida para voce e sua familia"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_titulo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_linha1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_subtitulo"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ncd"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageview_NCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/burn64"/>
+                <TextView
+                    android:id="@+id/text_titulo_NCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NCD"
+                    android:textAppearance="@style/titulo_card"/>
+
+                <TextView
+                    android:id="@+id/text_subtitulo_NCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Necessidade Calóricas Diárias"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_imc"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginLeft="4dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageview_imc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/imc64"/>
+                <TextView
+                    android:id="@+id/text_titulo_imc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMC"
+                    android:textAppearance="@style/titulo_card"/>
+
+                <TextView
+                    android:id="@+id/text_subtitulo_imc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Índice de Massa Corporal"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_linha2"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linear_linha1"
+        android:padding="5dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_perfil"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginRight="4dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageview_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:id="@+id/text_titulo_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfil"
+                    android:textAppearance="@style/titulo_card"/>
+
+                <TextView
+                    android:id="@+id/text_subtitulo_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mantenha seus dados Atualizados"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_dicas"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginLeft="4dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageview_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tip"/>
+                <TextView
+                    android:id="@+id/text_titulo_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dicas"
+                    android:textAppearance="@style/titulo_card"/>
+
+                <TextView
+                    android:id="@+id/text_subtitulo_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confira dicas sobre a sua saúde"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
